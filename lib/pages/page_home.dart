@@ -260,120 +260,229 @@ class _PageHomeState extends State<PageHome> {
           Expanded(
             flex: 2,
             child: Container(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Row(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15, bottom: 15, top: 15),
+                        child: Text("Menu Lainnya", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                      )
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 15, bottom: 15, top: 15),
-                          child: Text("Menu Lainnya", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: screenSize.width / 3,
+                                height:  screenSize.height / 5,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color.fromARGB(255, 197, 195, 195),
+                                      blurRadius: 2,
+                                      offset: Offset(2, 3)
+                                    )
+                                  ],
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Color.fromARGB(255, 145, 233, 255),
+                                      Color.fromARGB(255, 75, 215, 250),
+                                      Color.fromARGB(255, 6, 201, 250),
+                                      Color.fromARGB(255, 6, 201, 250),
+                                    ],
+                                    stops: const [
+                                      0.1,
+                                      0.3,
+                                      0.9,
+                                      1.0
+                                    ]
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    children: [
+                                      Image.asset('assets/icon/guru.png', width: 70, height: 70, fit: BoxFit.cover,),
+                                      Text("Pengajar", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14)),
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Text("Informasi tenaga pengajar.", style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic, fontSize: 12,), textAlign: TextAlign.justify),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: screenSize.width / 2.2,
+                                height:  screenSize.height / 5,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color.fromARGB(255, 197, 195, 195),
+                                      blurRadius: 2,
+                                      offset: Offset(2, 3)
+                                    )
+                                  ],
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Color.fromARGB(255, 250, 168, 162),
+                                      Color.fromARGB(255, 248, 153, 146),
+                                      Color.fromARGB(255, 250, 144, 137),
+                                      Color.fromARGB(255, 247, 133, 125),
+                                    ],
+                                    stops: const [
+                                      0.1,
+                                      0.3,
+                                      0.9,
+                                      1.0
+                                    ]
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    children: [
+                                      Image.asset('assets/icon/laporan.png', width: 70, height: 70, fit: BoxFit.cover,),
+                                      Text("Laporan", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14)),
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Text("Rekap laporan user\n(perserta didik / pengajar).", style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic, fontSize: 12,), textAlign: TextAlign.justify),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: screenSize.width / 3,
+                                height:  screenSize.height / 5,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color.fromARGB(255, 197, 195, 195),
+                                      blurRadius: 2,
+                                      offset: Offset(2, 3)
+                                    )
+                                  ],
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Color.fromARGB(255, 177, 156, 100),
+                                      Color.fromARGB(255, 177, 152, 84),
+                                      Color.fromARGB(255, 182, 152, 69),
+                                      Color.fromARGB(255, 180, 145, 49),
+                                    ],
+                                    stops: const [
+                                      0.1,
+                                      0.3,
+                                      0.9,
+                                      1.0
+                                    ]
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    children: [
+                                      Image.asset('assets/icon/guru.png', width: 70, height: 70, fit: BoxFit.cover,),
+                                      Text("Wali Kelas", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14)),
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Text("Informasi profile wali kelas.", style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic, fontSize: 12,), textAlign: TextAlign.justify),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: screenSize.width / 2.5,
+                                height:  screenSize.height / 5,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color.fromARGB(255, 197, 195, 195),
+                                      blurRadius: 2,
+                                      offset: Offset(2, 3)
+                                    )
+                                  ],
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Color.fromARGB(255, 186, 171, 250),
+                                      Color.fromARGB(255, 171, 153, 250),
+                                      Color.fromARGB(255, 162, 142, 250),
+                                      Color.fromARGB(255, 159, 139, 247),
+                                    ],
+                                    stops: const [
+                                      0.1,
+                                      0.3,
+                                      0.9,
+                                      1.0
+                                    ]
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    children: [
+                                      Image.asset('assets/icon/calendar.png', width: 70, height: 70, fit: BoxFit.cover,),
+                                      Text("Jadwal Ujian", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14)),
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Text("Informasi seputar\njadwal ujian.", style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic, fontSize: 12,), textAlign: TextAlign.justify),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              width: screenSize.width / 3,
-                              height:  screenSize.height / 5,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(15),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Color.fromARGB(255, 197, 195, 195),
-                                    blurRadius: 4,
-                                    offset: Offset(2, 4)
-                                  )
-                                ],
-                                gradient: LinearGradient(
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color.fromARGB(255, 145, 233, 255),
-                                    Color.fromARGB(255, 75, 215, 250),
-                                    Color.fromARGB(255, 6, 201, 250),
-                                    Color.fromARGB(255, 6, 201, 250),
-                                  ],
-                                  stops: const [
-                                    0.1,
-                                    0.3,
-                                    0.9,
-                                    1.0
-                                  ]
-                                ),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Column(
-                                  children: [
-                                    Image.asset('assets/icon/guru.png', width: 70, height: 70, fit: BoxFit.cover,),
-                                    Text("Pengajar", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14)),
-                                    Padding(
-                                      padding: const EdgeInsets.all(5.0),
-                                      child: Text("Informasi tenaga pengajar.", style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic, fontSize: 12,), textAlign: TextAlign.justify),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              width: screenSize.width / 2,
-                              height:  screenSize.height / 5,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(15),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Color.fromARGB(255, 197, 195, 195),
-                                    blurRadius: 4,
-                                    offset: Offset(2, 4)
-                                  )
-                                ],
-                                gradient: LinearGradient(
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color.fromARGB(255, 250, 168, 162),
-                                    Color.fromARGB(255, 248, 153, 146),
-                                    Color.fromARGB(255, 250, 144, 137),
-                                    Color.fromARGB(255, 247, 133, 125),
-                                  ],
-                                  stops: const [
-                                    0.1,
-                                    0.3,
-                                    0.9,
-                                    1.0
-                                  ]
-                                ),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Column(
-                                  children: [
-                                    Image.asset('assets/icon/laporan.png', width: 70, height: 70, fit: BoxFit.cover,),
-                                    Text("Laporan", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14)),
-                                    Padding(
-                                      padding: const EdgeInsets.all(5.0),
-                                      child: Text("Rekap laporan user\n(perserta didik dan pengajar).", style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic, fontSize: 12,), textAlign: TextAlign.justify),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    )
-                  ],
-                ),
+                  )
+                ],
               ),
             ),
           ),

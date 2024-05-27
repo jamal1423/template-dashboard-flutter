@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:presensi/pages/page_home.dart';
+import 'package:presensi/pages/page_profil.dart';
 import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 
 class PageDashboard extends StatefulWidget {
@@ -30,7 +31,7 @@ class _PageDashboardState extends State<PageDashboard> {
         children: const [
           MenuSatu(),
           PageHome(),
-          MenuTiga(),
+          PageProfil(),
         ],
       ),
       bottomNavigationBar: StylishBottomBar(
@@ -87,17 +88,6 @@ class MenuSatu extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text("Ini Menu Tab 1"),
-    );
-  }
-}
-
-class MenuTiga extends StatelessWidget {
-  const MenuTiga({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text("Ini Menu Tab 3"),
     );
   }
 }
